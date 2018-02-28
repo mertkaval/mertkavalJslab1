@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>JS Lab-1</head>
+
+<header>MERT KAVAL JS LAB-1</header>
+
+<body>
+    <script>
+        //(Test Cases-makeAbba)
+        function makeAbba(word1, word2) {
+            return word1 + word2 + word2 + word1;
+        }
+
+        console.log(makeAbba("Hi", "Bye"));
+        console.log(makeAbba("Yo", "Alice"));
+        console.log(makeAbba("What", "Up"));
+
+        //(Test cases-endsLy)
+
+        function endsLy(word) {
+
+
+            return result = word.endsWith("ly");
+        }
+
+        console.log(endsLy("odlly"));
+        console.log(endsLy("y"));
+        console.log(endsLy("oddy"));
+
+        //(test cases-firstHalf)
+
+        function firstHalf(input) {
+            var half = input.length / 2;
+            return result = input.substr(0, half);
+        }
+        console.log(firstHalf("WooHoo"));
+        console.log(firstHalf("HelloThere"));
+        console.log(firstHalf("abcdef"));
+
+
+        //(test cases-right2)
+        function right2(input) {
+            var length = input.length;
+            var lasttwo = input.substr(length - 2, length);
+            var first3 = input.substr(0, length - 2);
+            return result = lasttwo + first3;
+        }
+        console.log(right2("Hello"));
+        console.log(right2("Java"));
+        console.log(right2("Hi"));
+
+        //(test cases-concat)
+
+        function conCat(word1, word2) {
+            var last = word1.substring(word1.length - 1);
+            var first = word2.substring(0, 1);
+            var nofirstletter = word2.substr(1, word2.length);
+            if (last == first) {
+                return result = word1 + nofirstletter;
+            } else
+                return result = word1 + word2;
+
+
+        }
+
+        console.log(conCat("abc", "cat"));
+        console.log(conCat("dog", "cat"));
+        console.log(conCat("abc", ""));
+
+
+
+
+        //(test cases-frontAgain)
+
+        function frontagain(word) {
+            var first2letter = word.substring(0, 2);
+            var last2letter = word.substr(word.length - 2, word.length);
+
+            if (first2letter == last2letter) {
+
+                return true;
+
+
+            } else {
+
+                return false;
+            }
+        }
+
+        console.log(frontagain("edited"));
+
+        console.log(frontagain("edit"));
+
+        console.log(frontagain("ed"));
+
+        //a12345 a2345
+        //xb6789  b6789
+
+        //(test cases-defront)
+
+        function defront(word) {
+            var firstletter = word.substring(0, 1);
+            var secondletter = word.substring(1, 2);
+            var exceptfirst2letter = word.substring(2, word.length);
+            if (firstletter == 'a') {
+                return result = firstletter + exceptfirst2letter;
+
+            } else if (secondletter == 'b') {
+
+                return result = secondletter + exceptfirst2letter;
+            } else {
+
+                return result = exceptfirst2letter;
+            }
+        }
+        
+        console.log(defront("Hello"));
+        console.log(defront("java"));
+        console.log(defront("away"));
+        
+        
+        
+        //(test cases-withoutx2)
+        
+        function withoutx2 (word){
+         var firstletter = word.substring(0,1);
+            var secondletter = word.substring(1,2);
+            var exceptfirstletter = word.substring(1,word.length);
+            var exceptsecondletter = firstletter + word.substring(2,word.length);
+            if(firstletter =='x'){
+                return result = exceptfirstletter;
+            }
+            else if(secondletter=='x'){
+                return result = exceptsecondletter;
+                
+            }
+            else{
+                return result = word;
+            }
+            
+        }
+        
+        console.log(withoutx2("xHi"));
+        console.log(withoutx2("Hxi"));
+        console.log(withoutx2("Hi"));
+        
+        //(test cases lastchars)
+           
+        function lastchars (word1,word2){
+            var firstwordfirstletter = word1.substring(0,1);
+            var secondwordlastletter = word2.substring(word2.length-1,word2.length);
+            
+            
+            if(word1.length==0){
+                return result = '@' + secondwordlastletter;
+            }
+            else if(word2.length==0){
+                return result=firstwordfirstletter + '@';
+            }
+            else{
+                return result = firstwordfirstletter + secondwordlastletter;
+            }
+            
+        }
+
+        console.log(lastchars("last","chars"));
+        console.log(lastchars("yo","java"));
+        console.log(lastchars("hi",""));
+        
+        
+        //(test cases middletwo)
+        
+        function middletwo(word){
+        var middle = word.length/2;
+            return result= word.substring(middle-1,middle) + word.substring(middle,middle+1);
+        
+        }
+        
+        console.log(middletwo("string"));
+        console.log(middletwo("code"));
+        console.log(middletwo("Practice"));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>
